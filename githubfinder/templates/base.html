@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}" />
+
+    <title>Github Finder with Flask</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Willkommen to the Github Profile Finder</h1>
+      <h3>
+        This search engine will help you find profiles quickly just by knowing
+        the user. Use the GitHub API to get the profile information.
+      </h3>
+      <div class="search">
+        <form action="/" method="POST" name"search" >
+          <input name="user" id="user" type="text" />
+          <button class="button">Search</button>
+        </form>
+      </div>
+      {% block body %} {% endblock %}
+    </div>
+  </body>
+</html>
